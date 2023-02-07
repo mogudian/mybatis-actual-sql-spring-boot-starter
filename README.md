@@ -1,6 +1,7 @@
 # mybatis-actual-sql-spring-boot-starter
 
 基于 Spring Boot 和 Mybatis 拦截器，用于打印 Mybatis 执行时`实际带参数`的 SQL
+
 Mybatis 默认 debug 日志中可以将 Prepared-SQL 和参数，在排查问题时不方便，尤其是测试/预发环境，因此开发了这个项目
 
 ## 使用说明
