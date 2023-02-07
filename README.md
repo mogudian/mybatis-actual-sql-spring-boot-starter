@@ -25,7 +25,7 @@ Mybatis 默认 debug 日志中可以将 Prepared-SQL 和参数，在排查问题
 ```xml
 <!-- 这个是 logback-spring.xml 的写法，推荐使用这个区分环境 -->
 <springProfile name="dev,test,pre">
-  <logger name="com.mogudiandian.mybatis.actual.sql" level="TRACE" />
+    <logger name="com.mogudiandian.mybatis.actual.sql" level="TRACE" />
 </springProfile>
 ```
 
