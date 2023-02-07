@@ -32,14 +32,14 @@ Mybatis 默认 debug 日志中可以将 Prepared-SQL 和参数，在排查问题
 
 ## 依赖三方库
 
-依赖           | 版本号           | 说明
---------------|---------------|-----
-spring-boot | 2.3.4.RELEASE |
-mybatis-spring-boot-starter | 2.1.3 |
-fastjson | 1.2.73        |
-commons-lang3 | 3.11          |
-guava | 29.0-jre      |
-slf4j | 1.7.30    |
+| 依赖                          | 版本号           | 说明  |
+|-----------------------------|---------------|-----|
+| spring-boot                 | 2.3.4.RELEASE |     |
+| mybatis-spring-boot-starter | 2.1.3         |     |
+| fastjson                    | 1.2.73        |     |
+| commons-lang3               | 3.11          |     |
+| guava                       | 29.0-jre      |     |
+| slf4j                       | 1.7.30        |     |
 
 ## 使用前准备
 
