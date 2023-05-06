@@ -11,7 +11,7 @@ Mybatis 默认 debug 日志中可以将 Prepared-SQL 和参数，在排查问题
 ```xml
 <dependency>
     <groupId>com.mogudiandian</groupId>
-    <artifactId>joshua-util</artifactId>
+    <artifactId>mybatis-actual-sql-spring-boot-starter</artifactId>
     <version>LATEST</version>
 </dependency>
 ```
