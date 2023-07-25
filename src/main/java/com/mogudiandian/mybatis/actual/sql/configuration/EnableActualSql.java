@@ -6,7 +6,7 @@ import java.lang.annotation.*;
 
 /**
  * 启用SQL日志功能
- * @author sunbo
+ * @author Joshua Sun
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

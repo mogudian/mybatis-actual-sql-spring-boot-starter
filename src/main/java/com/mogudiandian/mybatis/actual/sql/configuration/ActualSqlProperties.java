@@ -7,7 +7,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 /**
  * 真实SQL日志的配置集合
  *
- * @author sunbo
+ * @author Joshua Sun
  */
 @ConfigurationProperties(prefix = "mybatis.actual.sql")
 @Getter

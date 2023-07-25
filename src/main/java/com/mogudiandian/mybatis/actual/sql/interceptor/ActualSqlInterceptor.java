@@ -34,7 +34,7 @@ import java.util.regex.Pattern;
  * Mybatis支持对 Executor/StatementHandler/ParameterHandler/ResultSetHandler 对象进行拦截
  * 执行顺序：Executor.method -> Plugin.invoke -> Interceptor.intercept -> Invocation.proceed -> method.invoke
  *
- * @author sunbo
+ * @author Joshua Sun
  */
 @Slf4j
 @Intercepts({

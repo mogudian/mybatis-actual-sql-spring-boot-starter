@@ -18,7 +18,7 @@ import java.util.Properties;
 
 /**
  * SQL日志功能启动类
- * @author sunbo
+ * @author Joshua Sun
  */
 @EnableConfigurationProperties(ActualSqlProperties.class)
 @ConditionalOnClass(SqlSessionFactory.class)
