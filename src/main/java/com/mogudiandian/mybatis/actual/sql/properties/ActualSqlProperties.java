@@ -1,4 +1,4 @@
-package com.mogudiandian.mybatis.actual.sql.configuration;
+package com.mogudiandian.mybatis.actual.sql.properties;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -17,21 +17,26 @@ public class ActualSqlProperties {
     /**
      * 是否展示方法名
      */
-    public boolean showMethod = true;
+    private boolean showMethod = true;
 
     /**
      * 是否展示SQL
      */
-    public boolean showSql = true;
+    private boolean showSql = true;
 
     /**
      * 是否展示执行耗时
      */
-    public boolean showElapsed = true;
+    private boolean showElapsed = true;
 
     /**
      * 是否展示结果行数
      */
-    public boolean showRows = true;
+    private boolean showRows = true;
+
+    /**
+     * 日志级别
+     */
+    private LogLevel logLevel = LogLevel.TRACE;
 
 }

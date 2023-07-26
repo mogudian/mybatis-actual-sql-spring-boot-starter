@@ -1,6 +1,7 @@
 package com.mogudiandian.mybatis.actual.sql.configuration;
 
 import com.mogudiandian.mybatis.actual.sql.interceptor.ActualSqlInterceptor;
+import com.mogudiandian.mybatis.actual.sql.properties.ActualSqlProperties;
 import org.apache.ibatis.plugin.Interceptor;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;

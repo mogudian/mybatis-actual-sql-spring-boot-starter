@@ -3,7 +3,7 @@ package com.mogudiandian.mybatis.actual.sql.interceptor;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.google.common.base.Stopwatch;
-import com.mogudiandian.mybatis.actual.sql.configuration.ActualSqlProperties;
+import com.mogudiandian.mybatis.actual.sql.properties.ActualSqlProperties;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.FastDateFormat;
@@ -260,7 +260,7 @@ public class ActualSqlInterceptor implements Interceptor {
      */
     private void formatSqlLog(SqlCommandType sqlCommandType, String sqlId, String sql, long elapsed, Object result) {
         if (actualSqlProperties.isShowMethod()) {
-            log.trace("Mapper method ===> {}", sqlId);
+            actualSqlProperties.getLogLevel().log(log, "Mapper method ===> {}", sqlId);
         }
         if (actualSqlProperties.isShowSql()) {
             sql = sql.trim();
@@ -271,17 +271,17 @@ public class ActualSqlInterceptor implements Interceptor {
             } else {
                 endLine = "";
             }
-            log.trace("SQL ===> {}{}", sql, endLine);
+            actualSqlProperties.getLogLevel().log(log, "SQL ===> {}{}", sql, endLine);
         }
         if (actualSqlProperties.isShowElapsed()) {
-            log.trace("Time Elapsed ===> {} ms", elapsed);
+            actualSqlProperties.getLogLevel().log(log, "Time Elapsed ===> {} ms", elapsed);
         }
         if (actualSqlProperties.isShowRows()) {
             switch (sqlCommandType) {
                 case INSERT:
                 case UPDATE:
                 case DELETE:
-                    log.trace("Effect Count ===> {}", result);
+                    actualSqlProperties.getLogLevel().log(log, "Effect Count ===> {}", result);
                     break;
                 case SELECT:
                     int count;
@@ -290,7 +290,7 @@ public class ActualSqlInterceptor implements Interceptor {
                     } else {
                         count = 1;
                     }
-                    log.trace("Record Count ===> {}", count);
+                    actualSqlProperties.getLogLevel().log(log, "Record Count ===> {}", count);
                     break;
             }
         }
