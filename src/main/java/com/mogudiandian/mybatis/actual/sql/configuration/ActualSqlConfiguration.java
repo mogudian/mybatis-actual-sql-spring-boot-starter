@@ -8,6 +8,7 @@ import org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Lazy;
@@ -21,6 +22,7 @@ import java.util.Properties;
  * SQL日志功能启动类
  * @author Joshua Sun
  */
+@ConditionalOnProperty(prefix = "mybatis.actual.sql", name = "enabled", havingValue = "true", matchIfMissing = true)
 @EnableConfigurationProperties(ActualSqlProperties.class)
 @ConditionalOnClass(SqlSessionFactory.class)
 @AutoConfigureAfter(MybatisAutoConfiguration.class)

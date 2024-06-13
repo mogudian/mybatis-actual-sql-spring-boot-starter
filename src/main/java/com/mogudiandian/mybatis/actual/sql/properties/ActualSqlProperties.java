@@ -15,6 +15,11 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class ActualSqlProperties {
 
     /**
+     * 是否启用
+     */
+    private boolean enabled = true;
+
+    /**
      * 是否展示方法名
      */
     private boolean showMethod = true;

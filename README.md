@@ -30,6 +30,11 @@ Mybatis 默认 debug 日志中可以将 Prepared-SQL 和参数，在排查问题
 </springProfile>
 ```
 
+- 3、如果在生产环境不需要开启，可以通过下面配置关闭
+```properties
+mybatis.actual.sql.enabled=false
+```
+
 ## 依赖三方库
 
 | 依赖                          | 版本号           | 说明  |

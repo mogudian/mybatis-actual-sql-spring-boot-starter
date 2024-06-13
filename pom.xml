@@ -10,7 +10,7 @@
 
 	<groupId>com.mogudiandian</groupId>
 	<artifactId>mybatis-actual-sql-spring-boot-starter</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 	<name>mybatis-actual-sql-spring-boot-starter</name>
 	<description>Mybatis Actual SQL Printer</description>

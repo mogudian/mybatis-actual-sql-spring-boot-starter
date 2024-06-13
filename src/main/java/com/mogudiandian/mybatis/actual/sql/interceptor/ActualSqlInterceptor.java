@@ -96,7 +96,11 @@ public class ActualSqlInterceptor implements Interceptor {
      * @throws SQLException 整个拦截器链都可能抛Throwable的异常，所以不处理直接向上抛
      */
     @Override
-    public Object intercept(Invocation invocation) throws SQLException {
+    public Object intercept(Invocation invocation) throws Throwable {
+        if (!actualSqlProperties.isEnabled()) {
+            return invocation.proceed();
+        }
+
         Object[] args = invocation.getArgs();
 
         MappedStatement mappedStatement = (MappedStatement) args[0];
